@@ -167,10 +167,29 @@ body {
         max-width: 250px;
     }
 
-    .contacts {
+    .socials {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 400px;
+    }
+
+    .contacts {
+        min-height: 200px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    :where(.contact__phone, .contact__email):before {
+        left: -33px;
+    }
+
+    .socials__inner {
+        justify-content: space-evenly;
+    }
+
+    .socials__link {
+        width: 26px;
+        height: 26px;
     }
 }
 
@@ -190,13 +209,12 @@ body {
     }
 
     .contacts {
-        flex-direction: row;
         min-height: auto;
-
     }
 
     .aside {
         background-color: #ccc;
     }
+
 
 }
