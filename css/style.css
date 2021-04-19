@@ -12,6 +12,10 @@ body {
     display: flex;
 }
 
+.header {
+    padding-top: 40px;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -22,21 +26,67 @@ body {
     max-width: 400px;
     width: 100%;
     min-height: 100%;
-    background-color: rgb(72, 72, 146);
+    background-color: rgb(65, 65, 116);
 }
+
 .contacts {
-    width: 100%;
+    padding: 50px 20px;
+    text-align: center;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.socials__title {
+    display: block;
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.socials__inner {
+    width: 300px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
-.contacts__link {
-    transition: transform 0.3s ;
+.contacts__top-link {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.contacts__link:hover {
+
+:where(.contact__phone, .contact__email):before {
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.contact__phone::before {
+    content: url('../images/SVG/mobile.svg');
+}
+
+.contact__email::before {
+    content: url('../images/SVG/envelope-o.svg');
+}
+
+
+.csocials__link {
+    transition: transform 0.3s;
+}
+
+.socials__link:hover {
     transform: scale(1.1);
 }
 
@@ -50,7 +100,7 @@ body {
 }
 
 .top {
-    padding: 19px 25px;
+    padding: 19px 35px;
 }
 
 .skills {
@@ -59,7 +109,7 @@ body {
 
 .skills-punkt {
     margin-bottom: 14px;
-    margin-left: 25px;
+    margin-left: 35px;
     position: relative;
 }
 
@@ -74,7 +124,7 @@ body {
 
 .bottom {
     background-color: rgb(231, 231, 231);
-    padding: 50px 25px;
+    padding: 50px 35px;
 }
 
 .experience-position {
@@ -83,11 +133,28 @@ body {
     margin-bottom: 12px;
 }
 
+.education.skills {
+    margin-bottom: 50px;
+}
+
+.experience__box {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-bottom: 4px;
+}
+
 .experience__link {
     margin-left: 20px;
-    color: rgb(228, 117, 26);
     font-weight: 600;
+    margin-left: auto;
+    transition: color 0.2s;
+    color: rgb(228, 117, 26);
 }
+
+.experience__link:hover {
+    color: rgb(65, 65, 116);
+}
+
+
 
 @media (max-width: 1200px) {
     .global-container {
@@ -106,26 +173,30 @@ body {
         min-height: 400px;
     }
 }
+
 @media (max-width: 570px) {
 
-    .aside{
+    .aside {
         max-width: 100%;
     }
- .global-container {
-     flex-direction: column;
- }
-.my-photo {
-    width: 100%;
-    height: auto;
-}
-.contacts {
-    flex-direction: row;
-    min-height: auto;
 
-}
+    .global-container {
+        flex-direction: column;
+    }
 
-.aside {
-    background-color: #ccc;
-}
+    .my-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .contacts {
+        flex-direction: row;
+        min-height: auto;
+
+    }
+
+    .aside {
+        background-color: #ccc;
+    }
 
 }
