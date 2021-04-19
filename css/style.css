@@ -1,6 +1,7 @@
 body {
     background-color: #fff;
     line-height: 1.2;
+    font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -86,4 +87,45 @@ body {
     margin-left: 20px;
     color: rgb(228, 117, 26);
     font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .global-container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 730px) {
+    .aside {
+        max-width: 250px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+    }
+}
+@media (max-width: 570px) {
+
+    .aside{
+        max-width: 100%;
+    }
+ .global-container {
+     flex-direction: column;
+ }
+.my-photo {
+    width: 100%;
+    height: auto;
+}
+.contacts {
+    flex-direction: row;
+    min-height: auto;
+
+}
+
+.aside {
+    background-color: #ccc;
+}
+
 }
