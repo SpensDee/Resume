@@ -61,6 +61,11 @@ body {
     font-weight: 300;
     margin-bottom: 10px;
     position: relative;
+    transition: color 0.2s;
+}
+
+.contacts__top-link:hover {
+    color: rgb(228, 117, 26);
 }
 
 
@@ -82,7 +87,7 @@ body {
 }
 
 
-.csocials__link {
+.socials__link {
     transition: transform 0.3s;
 }
 
